@@ -40,7 +40,24 @@
                     </button>
                 </div>
                 <div class="id-section">
-
+                    <div class="slsu-section">
+                        <h5 class="fname">SLSU</h5>
+                    </div>
+                    <div class="name-section">
+                        <h5 class="fname">test</h5>
+                        <h5 class="mname">test</h5>
+                        <h5 class="lname">test</h5>
+                        <h5 class="suffix">test</h5>
+                    </div>
+                    <div class="id-number-section">
+                        <h5 class="idnumber">test</h5>
+                    </div>
+                    <div class="department-section">
+                        <h5 class="department">test</h5>
+                    </div>
+                    <div class="course-section">
+                        <h5 class="course">test</h5>
+                    </div>
                 </div>
                 <div class="id-info">
                     <h3 class="id-info-label">ID Information</h3>
