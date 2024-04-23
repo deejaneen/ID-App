@@ -193,6 +193,7 @@ b {
 
 .login-container:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    transition: all 300ms ease;
 }
 
 .login-container input {
@@ -366,6 +367,16 @@ aside .sidebar a:hover span {
     margin: 0 auto;
 }
 
+.id-info-button-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 7;
+    grid-column: 1/ span 4;
+    gap: 40px;
+    z-index: 1;
+}
+
 main {
     display: inline-block;
     align-items: center;
@@ -376,7 +387,8 @@ main {
     margin-right: auto;
 }
 
-.button-section button {
+.button-section button,
+.id-info-button-section button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,88 +397,260 @@ main {
     color: var(--color-primary);
     background: var(--color-background);
     border: none;
-
 }
 
 .button-section button:hover {
     color: var(--color-success);
     background: var(--color-background);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
 
+.id-info-button-section button:hover {
+    color: var(--color-success);
+    background: var(--color-background);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .btn-edit {
     margin-left: 10%;
 }
 
-.id-section {
+.department-course-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2;
+    grid-column: 1/ span 4;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    background: var(--color-white);
+    height: 100px;
+    width: 100%;
+    border-radius: 40px;
+    padding: 0 20px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.dcs-department,
+.dcs-course {
+    width: 45%;
+}
+
+.dcs-department button,
+.dcs-course button {
+    color: var(--color-primary);
+    background: var(--color-background);
+}
+
+.id-section,
+.id-info {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 10% 16% 16% 16% 16% 16% 10%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 5% 10% 13% 13% 13% 13% 13% 5% 10% 5%;
     padding: 5px auto;
     border-radius: 40px;
     background: var(--color-white);
     height: 200px;
-    width: 80%;
+    width: 96%;
     color: var(--color-primary);
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    margin-right: 2rem;
-    
+    row-gap: 10px;
 }
 
 .id-section h5 {
     justify-self: center;
     align-self: center;
-    font-size: 1em;
+    font-size: 0.8em;
 }
+
 .slsu-section {
     display: inline-grid;
-    justify-content: center;
-    align-items: center;
-    grid-row: 2;
+    text-align: center;
+    grid-row: 1;
     grid-column: 1/ span 4;
-    font-size: 1.5em;
+    font-size: 2em;
 }
-.name-section {
+
+.name-section,
+.department-section,
+.course-section,
+.id-number-section {
     display: inline-grid;
     justify-content: center;
     align-items: center;
     grid-row: 3;
     grid-column: 1/ span 4;
-    gap: 20px;
+    row-gap: 0;
+    column-gap: 30px;
+    grid-template-rows: 50% 50%;
+
 }
 
-.fname{
+.name-section small {
+    grid-row: 2;
+}
+
+.id-number-section small,
+.department-section small,
+.course-section small,
+.name-section small {
+    display: inline-grid;
+    z-index: 0;
+    font-size: 0.6em;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+
+}
+
+.fname {
     grid-column: 1;
 }
-.mname{
+
+.mname {
     grid-column: 2;
 }
-.lname{
+
+.lname {
     grid-column: 3;
 }
-.suffix{
+
+.suffix {
     grid-column: 4;
 }
 
-.id-number-section{
+
+.id-number-section {
     display: inline-grid;
     justify-content: center;
     align-items: center;
     grid-row: 4;
     grid-column: 1/ span 4;
 }
-.department-section{
+
+.department-section {
     display: inline-grid;
     justify-content: center;
     align-items: center;
     grid-row: 5;
     grid-column: 1/ span 4;
 }
-.course-section{
+
+.course-section {
     display: inline-grid;
     justify-content: center;
     align-items: center;
     grid-row: 6;
     grid-column: 1/ span 4;
+}
+
+.id-info {
+    display: grid;
+    grid-row: 3/ span 3;
+    grid-column: 2/span 3;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 20% 20% 20% 10% 5% 10% 5%;
+    padding: 5px auto;
+    border-radius: 40px;
+    background: var(--color-white);
+    height: 60vh;
+    width: 100%;
+    color: var(--color-primary);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    row-gap: 0;
+    align-items: center;
+}
+
+.id-info-label {
+    display: inline-grid;
+    text-align: center;
+    grid-row: 1;
+    grid-column: 1/span 4;
+}
+
+.id-info .input {
+    color: var(--color-primary);
+    width: 40px;
+}
+
+.id-info-name-section,
+.id-info-number-section,
+.id-info-department-section,
+.id-info-course-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.id-info-name-section {
+    grid-row: 2;
+    grid-column: 1/ span 4;
+}
+
+.id-info-number-section {
+    grid-row: 3;
+    grid-column: 1/ span 4;
+
+}
+
+.id-info-department-section {
+    grid-row: 4;
+    grid-column: 1/ span 4;
+}
+
+.id-info-course-section {
+    grid-row: 5;
+    grid-column: 1/ span 4;
+}
+
+.id-info-number-section .input,
+.id-info-department-section .input,
+.id-info-course-section .input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.id-info-number-section .input input,
+.id-info-department-section .input input,
+.id-info-course-section .input input {
+    width: 80%;
+
+}
+
+.id-info-department-section .input .department button,
+.id-info-course-section .input .course button,
+.id-info-department-section .input .department button ul,
+.id-info-course-section .input .course button ul {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+}
+
+.dropdown-item:hover {
+    color: var(--color-primary) !important;
+    background-color: var(--color-background) !important;
+}
+
+.input-fname,
+.input-mname,
+.input-lname,
+.input-suffix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / span 4;
+    width: 80%;
+}
+
+.id-info-name-section input {
+    margin: 10px;
+    width: 80%;
+}
+
+.id-info h3 {
+    font-size: 1.5rem;
 }
